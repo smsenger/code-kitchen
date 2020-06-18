@@ -11,7 +11,11 @@ module.exports = (sequelize, DataTypes) => {
     glutenFree: DataTypes.BOOLEAN
   }, {});
   Recipes.associate = function(models) {
-    Recipes.belongsToMany(models.Categories, { through: 'RecipesCategories', foreignKey:'recipesId', otherKey: 'categoriesId', onDelete: 'CASCADE})
+    Recipes.belongsToMany(models.Categories, { 
+      through: 'RecipesCategories', 
+      foreignKey:'recipesId', 
+      otherKey: 'categoriesId'
+    })
   };
   return Recipes;
 };
