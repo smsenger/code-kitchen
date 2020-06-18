@@ -23,7 +23,15 @@ module.exports = {
       references: {
         model: 'Categories',
         id: 'id'
-      }
+      },
+   },
+   createdAt: {
+     allowNull: false,
+     type: Sequelize.DATE
+   },
+   updatedAt: {
+     allowNull: false,
+     type: Sequelize.DATE
    }
   })
 },

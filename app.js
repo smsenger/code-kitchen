@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-
+const models = require('./models')
 var apiRouter = require('./routes/api')
 
 var app = express();
@@ -32,7 +32,9 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render(err);
+  res.json(err);
 });
+
+
 
 module.exports = app;
