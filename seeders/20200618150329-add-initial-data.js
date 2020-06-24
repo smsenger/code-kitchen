@@ -56,6 +56,30 @@ module.exports = {
       updatedAt: new Date()
     },
     {
+      name: 'Peach Pie',
+      review: 'Very peachy!',
+      description: 'Biggest pie in Georgia',
+      url: 'http://url.com',
+      likes: 50,
+      vegetarian: false,
+      vegan: false,
+      glutenFree: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      name: 'Cheezy Pasta',
+      review: 'Awesome comfort food',
+      description: 'Pasta with goat cheese',
+      url: 'http://url.com',
+      likes: 50,
+      vegetarian: true,
+      vegan: false,
+      glutenFree: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
       name: 'Chocolate chip cookies',
       review: 'Best comfort treat ever',
       description: 'Awesome chocolate chip cookies',

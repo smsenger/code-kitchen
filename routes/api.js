@@ -85,4 +85,15 @@ router.delete('/recipes/:id', (req, res) => {
     })
 })
 
+router.post('/recipes/:id/likes', (req, res) => {
+  db.Recipes.findByPk(req.params.id)
+  .then(recipe => {
+    recipe.likes = recipe.likes + 1
+    return recipe.save();
+  })
+  .then(recipe => {
+    res.json(recipe.likes)
+  })
+})
+
 module.exports = router;
